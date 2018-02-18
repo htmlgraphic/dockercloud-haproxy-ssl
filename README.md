@@ -6,6 +6,14 @@ In this guide I hope to help you save time and energy understanding the few impo
 
 Once you have used the updated Docker Cloud Stack in this repo you will have a number of web services with a HAProxy Load Balancing in front of them, redirecting any HTTP (Port 80) requests to HTTPS (Port 443) and a valid certificate automatically renewed and managed via letsencrypt-docker container via a persistent data volume.
 
+---
+## Deploy to Docker Cloud
+Create a [Docker Cloud](https://cloud.docker.com) account, add a   **Cloud provider**. Once complete, `one click` will create a functional instance.
+
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
+
+---
+
 An important setting to understand is the exclusion of any open ports on the system you have behind your proxy. HAProxy will map out these open ports and try to route incoming requests to them.
 
 `EXCLUDE_PORTS=443,22`
@@ -23,7 +31,7 @@ The following repos are used with in this stack file.
 * [https://github.com/ixc/letsencrypt-docker](https://github.com/ixc/letsencrypt-docker)
 
 
-----
+---
 
 Certbot renewal process via Crobjob:
 
