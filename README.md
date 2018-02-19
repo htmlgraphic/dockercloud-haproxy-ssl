@@ -39,14 +39,13 @@ Certbot renewal process via Crobjob:
 $ /etc/periodic/daily/certbot
 ```
 
-
 If you need to manage multiple domains note the following syntax within the Stackfile ([more info](https://github.com/ixc/letsencrypt-docker/blob/master/bin/certbot.sh#L29)):
 `DOMAINS=example.com,www.example.com|example.net,www.example.net`
-
-
 
 Helpful tips about volume within Docker Cloud Stacks and how the `volumes` avaiable from the `letsencrypt` container are referenced: [https://docs.docker.com/docker-cloud/apps/stack-yaml-reference/#volumes](https://docs.docker.com/docker-cloud/apps/stack-yaml-reference/#volumes)
 
 
+---
 
-
+## Patches / Feedback Welcome!
+[Send a message](https://github.com/htmlgraphic/dockerclould-haproxy-ssl/issues/new)
